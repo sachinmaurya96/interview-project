@@ -173,16 +173,18 @@ const Footer = () => {
 };
 const Wrapper = styled.footer`
 margin-top: 50px;
-  background-color: #f1fffe;
-  border-top: 1px solid lightgray;
+  background-color:var(--card-bg);
+  border-top:var(--border);
   .copyright{
     padding: 20px 0;
     font-size: 13px;
+    color: var(--text-color);
+    border-top: var(--border);
   }
   .footer_content {
     margin-top: 50px;
-    background-color: #fff;
     padding: 20px 0;
+    color: var(--text-color);
     .container {
       display: flex;
       justify-content: space-between;
@@ -286,7 +288,7 @@ margin-top: 50px;
       font-weight: 700;
       font-size: 17px;
       line-height: 24px;
-      color: #2b2b2f;
+      color: var(--text-color);
     }
 
     .subtitle {
@@ -294,7 +296,7 @@ margin-top: 50px;
       font-weight: 600;
       font-size: 13px;
       line-height: 18px;
-      color: #5f5d6b;
+      color: var(--text-color);
     }
 
     .input_field {
@@ -303,16 +305,17 @@ margin-top: 50px;
       padding: 0 0 0 12px;
       border-radius: 5px;
       outline: none;
-      border: 1px solid #e5e5e5;
-      filter: drop-shadow(0px 1px 0px #efefef)
-        drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+      border:var(--border);
+      color: var(--text-color);
+      /* filter: drop-shadow(0px 1px 0px #efefef)
+        drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5)); */
       transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
     }
 
     .input_field:focus {
       border: 1px solid transparent;
       box-shadow: 0px 0px 0px 1px #2b2b2f;
-      background-color: transparent;
+      background-color: var(--card-bg);
     }
 
     .form {

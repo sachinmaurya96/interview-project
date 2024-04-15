@@ -30,13 +30,14 @@ const TestimonialCard = () => {
 };
 const Card = styled.div`
 .testimonial-container{
-  background-color: #fff;
-  color: black;
+  background-color: var(--card-bg);
+
+  color: var(--text-color);
   /* border-radius: 5px; */
   padding: 20px;
   max-width: 768px;
   position:relative;
-  border: 1px solid lightgray;
+  border: var(--border);
   margin: 50px 0;
 
   &:hover{

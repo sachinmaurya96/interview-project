@@ -134,10 +134,12 @@ const Home = styled.section`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: var(--text-color);
 
     h1 {
       text-transform: capitalize;
       font-weight: 600;
+      color: var(--text-color);
     }
     .cards {
       display: grid;
@@ -154,6 +156,7 @@ const Home = styled.section`
       flex-direction: column;
       gap: 10px;
       height: 100%;
+      color: var(--text-color);
       h3 {
         font-weight: 600;
         font-size: 18px;

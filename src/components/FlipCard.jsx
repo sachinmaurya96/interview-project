@@ -29,8 +29,8 @@ const Card = styled.div`
     padding: 20px;
     overflow: hidden;
     /* border-radius: 10px; */
-    background: #fff;
-    border: 1px solid lightgray;
+    background: var(--card-bg);
+    border:var(--border);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -41,7 +41,7 @@ const Card = styled.div`
     align-items: center;
     text-align:center;
     gap: 20px;
-    color: black;
+    color: var(--text-color);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
     img{

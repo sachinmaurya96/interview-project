@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import {
   FaTwitter,
@@ -11,16 +11,17 @@ import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
 const Header = () => {
-    const [toggle,setToggle] = useState(false)
-    const [border,setBorder] = useState(false)
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 0) {
-          setBorder(true)
-        } else {
-         setBorder(false)
-        }
-      });
-      
+  const [toggle, setToggle] = useState(false);
+  const [border, setBorder] = useState(false);
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      setBorder(true);
+    } else {
+      setBorder(false);
+    }
+  });
+ 
+
   return (
     <>
       <Menu className={`${border && "border"}`}>
@@ -47,18 +48,49 @@ const Header = () => {
                 <a href="#">ims server 2</a>
                 <a href="#">hr tos </a>
                 <a href="#">hr aerm</a>
-            </div>
+              </div>
             </button>
-           
+            <div class="">
+              <label class="toggle" for="switch">
+                <input id="switch" class="input" type="checkbox" />
+                <div class="icon icon--moon" onClick={()=> document.body.className="dark"}>
+                  <svg
+                    height="25"
+                    width="25"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="icon icon--sun" onClick={()=>  document.body.className="light"}>
+                  <svg
+                    height="25"
+                    width="25"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                  </svg>
+                </div>
+              </label>
+            </div>
           </div>
           <div className="menu_icon">
-            <FiMenu size={25} onClick={()=>setToggle(true)}/>
+            <FiMenu size={25} onClick={() => setToggle(true)} />
           </div>
         </div>
       </Menu>
-      <PopupMenu className={`${toggle?"show":""}`}>
+      <PopupMenu className={`${toggle ? "show" : ""}`}>
         <div className="menubar">
-            <RxCross2 className="cross" onClick={()=>setToggle(false)}/>
+          <RxCross2 className="cross" onClick={() => setToggle(false)} />
           <div className="links">
             <a href="#">home</a>
             <a href="#">About</a>
@@ -70,6 +102,38 @@ const Header = () => {
             <button>
               cms login <FaAngleDown />
             </button>
+            <div class="container">
+              <label class="toggle" for="switch">
+                <input id="switch" class="input" type="checkbox" />
+                <div class="icon icon--moon">
+                  <svg
+                    height="32"
+                    width="32"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="icon icon--sun">
+                  <svg
+                    height="32"
+                    width="32"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                  </svg>
+                </div>
+              </label>
+            </div>
           </div>
         </div>
       </PopupMenu>
@@ -78,15 +142,14 @@ const Header = () => {
 };
 const Menu = styled.nav`
   padding: 10px 0;
- 
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color:var(--bg);
   z-index: 2;
-  &.border{
-    border-bottom: 1px solid lightgray;
+  &.border {
+    border-bottom:var(--border);
   }
   .container {
     display: flex;
@@ -102,9 +165,53 @@ const Menu = styled.nav`
       gap: 20px;
       a {
         text-transform: uppercase;
+        color: var(--text-color);
       }
     }
     .auth {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .toggle {
+        background-color: var(--card-bg);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+        line-height: 1;
+      }
+
+      .input {
+        display: none;
+      }
+
+      .icon {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        transition: transform 500ms;
+      }
+
+      .icon--moon {
+        transition-delay: 200ms;
+        color: var(--text-color);
+      }
+
+      .icon--sun {
+        transform: scale(0);
+        color: var(--text-color);
+      }
+
+      #switch:checked + .icon--moon {
+        transform: rotate(360deg) scale(0);
+      }
+
+      #switch:checked ~ .icon--sun {
+        transition-delay: 200ms;
+        transform: scale(1) rotate(360deg);
+      }
       button {
         position: relative;
         text-transform: uppercase;
@@ -128,7 +235,7 @@ const Menu = styled.nav`
         display: flex;
         align-items: center;
         transition: 150ms ease-in-out;
-        &:hover{
+        &:hover {
           background-color: #5c96ec;
         }
       }
@@ -142,8 +249,8 @@ const Menu = styled.nav`
           rgba(0, 0, 0, 0.192) 0px 5.10423px 9.18761px -3.375px,
           rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px;
       }
-      
-      .dropdown{
+
+      .dropdown {
         position: absolute;
         z-index: 3;
         background-color: #fff;
@@ -156,14 +263,14 @@ const Menu = styled.nav`
         top: 40px;
         left: 0;
         text-transform: capitalize;
-        transition:0.3s;
-       display: none;
-       color: black;
-       text-align: left;
-       font-weight: 400;
-       font-size: 15px;
+        transition: 0.3s;
+        display: none;
+        color: black;
+        text-align: left;
+        font-weight: 400;
+        font-size: 15px;
       }
-      button:hover .dropdown{
+      button:hover .dropdown {
         display: flex;
         transition: 0.3s;
       }
@@ -209,21 +316,21 @@ const Menu = styled.nav`
   }
 `;
 const PopupMenu = styled.div`
-height: 100%;
-width: 100%;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 5;
-background-color: rgba(0,0,0,0.7);
-padding: 50px;
-transition: 0.3s;
-display: none;
-&.show{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  transition: 0.3s;
+  display: none;
+  &.show {
     display: block;
     transition: 0.3s;
-}
-.menubar{
+  }
+  .menubar {
     height: 100%;
     width: 100%;
     background-color: #fff;
@@ -271,22 +378,22 @@ display: none;
           rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px;
       }
     }
-    .cross{
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        cursor: pointer;
+    .cross {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
     }
-    .links{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 30px;
-        text-transform: uppercase;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+      text-transform: uppercase;
     }
-}
-@media only screen and (max-width: 600px){
+  }
+  @media only screen and (max-width: 600px) {
     padding: 20px;
-}
+  }
 `;
 export default Header;

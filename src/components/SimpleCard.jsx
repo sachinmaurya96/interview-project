@@ -17,14 +17,14 @@ const SimpleCard = () => {
 };
 const Card = styled.div`
   .card {
-    border: 1px solid lightgray;
+    border:var(--border);
     &:hover {
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
   }
   .card-title {
-    color: #262626;
+    color: var(--text-color);
     font-size: 3em;
     line-height: normal;
     font-weight: 700;
@@ -35,7 +35,7 @@ const Card = styled.div`
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5em;
-    color: #452c2c;
+    color: var(--text-color);
   }
 
   .small-desc {
@@ -46,13 +46,13 @@ const Card = styled.div`
     display: block;
     position: relative;
     max-width: 100%;
-    background-color: #f2f8f9;
+    background-color: var(--card-bg);
     /* border-radius: 10px; */
     padding: 2em 1.2em;
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
-    background: #fff;
+    color: var(--text-color);
     font-family: Arial, Helvetica, sans-serif;
   }
 `;
