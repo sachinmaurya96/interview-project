@@ -24,9 +24,9 @@ const HomePage = () => {
           <h1>problem solver</h1>
           <p>SOLVING PROBLEMS FOR EVERY PART OF YOUR BUSINESS OR START UP</p>
           <div className="cards">
-            <SimpleCard />
-            <SimpleCard />
-            <SimpleCard />
+            <SimpleCard number={"01"}/>
+            <SimpleCard number={"02"}/>
+            <SimpleCard number={"03"}/>
           </div>
         </div>
        </div>
@@ -35,12 +35,12 @@ const HomePage = () => {
           <h1>problem solver</h1>
           <p>SOLVING PROBLEMS FOR EVERY PART OF YOUR BUSINESS OR START UP</p>
           <div className="cards">
-            <FlipCard />
-            <FlipCard />
-            <FlipCard />
-            <FlipCard />
-            <FlipCard />
-            <FlipCard />
+            <FlipCard title={"Production"}/>
+            <FlipCard title={"Logistic & Dispatch"}/>
+            <FlipCard title={"Inventory Management"}/>
+            <FlipCard title={"Finance & Commercial"}/>
+            <FlipCard title={"Legal & Compliance"}/>
+            <FlipCard title={"HR & Admin"}/>
           </div>
         </div>
         </div>
@@ -145,6 +145,7 @@ const Home = styled.section`
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      align-items: stretch;
     }
   }
   .about {

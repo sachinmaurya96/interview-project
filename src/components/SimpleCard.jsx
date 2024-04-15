@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const SimpleCard = () => {
+const SimpleCard = ({number}) => {
   return (
     <Card>
       <div className="card">
-        <p className="card-title">01</p>
+        <p className="card-title">{number}</p>
         <p className="small-desc">
           Whether you're a startup looking for support or an MNC planning to
           enter the Indian market, we've got the right solutions. Grow and

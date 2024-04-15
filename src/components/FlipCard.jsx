@@ -7,7 +7,7 @@ const FlipCard = ({title,img}) => {
       <div class="card">
         <div class="content">
           <img src="https://i.postimg.cc/KvPBTdYm/production.png" alt="production" />
-          <p class="heading">Title</p>
+          <p class="heading">{title}</p>
           <p class="para">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
             laboriosam at voluptas minus culpa deserunt delectus sapiente

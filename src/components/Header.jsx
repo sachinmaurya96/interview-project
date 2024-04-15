@@ -13,7 +13,7 @@ import { RxCross2 } from "react-icons/rx";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [border, setBorder] = useState(false);
-  document.body.className="light"
+  
   window.addEventListener("scroll", function () {
     if (window.scrollY > 0) {
       setBorder(true);
