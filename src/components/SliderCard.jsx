@@ -13,8 +13,10 @@ const SliderCard = () => {
 const Card = styled.div`
 display: flex;
 flex-direction: column;
+align-items: start;
+text-align: left;
 gap: 20px;
-color: #4b4949;
+color: #fff;
     h3{
         text-transform: capitalize;
         font-weight: 400;

@@ -34,7 +34,7 @@ const TestimonialSlider = () => {
         spaceBetween={30}
         autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
         pagination={{
           clickable: true,

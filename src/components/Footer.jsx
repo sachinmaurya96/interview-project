@@ -172,10 +172,12 @@ const Footer = () => {
   );
 };
 const Wrapper = styled.footer`
+margin-top: 50px;
   background-color: #f1fffe;
   border-top: 1px solid lightgray;
   .copyright{
     padding: 20px 0;
+    font-size: 13px;
   }
   .footer_content {
     margin-top: 50px;
@@ -186,6 +188,11 @@ const Wrapper = styled.footer`
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 50px;
+    }
+    .about_company{
+      p{
+        font-size: 13px;
+      }
     }
     .usefull_link,
     .our_services {
@@ -198,6 +205,7 @@ const Wrapper = styled.footer`
           list-style: none;
           display: flex;
           align-items: center;
+          font-size: 13px;
         }
       }
     }
@@ -205,6 +213,9 @@ const Wrapper = styled.footer`
       display: flex;
       flex-direction: column;
       gap: 15px;
+      p{
+        font-size: 13px;
+      }
       .social {
         display: flex;
         align-items: center;
@@ -310,24 +321,21 @@ const Wrapper = styled.footer`
         display: flex;
         align-items: center;
         gap: 5px;
-        border-radius: 8px;
+        /* border-radius: 8px; */
         height: 40px;
         border: none;
         background-color: #488aec;
         color: white;
         padding: 15px;
-        box-shadow: 0 0.7065919983928324px 0.7065919983928324px -0.625px #00000026,
-          0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,
-          0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,
-          0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,
-          0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,
-          0 30px 30px -3.75px #0000000d;
-        font-weight: bold;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         font-family: Montserrat;
         cursor: pointer;
         display: flex;
         align-items: center;
         transition: 150ms ease-in-out;
+        &:hover{
+          background-color: #5c96ec;
+        }
       }
 
       button:active {

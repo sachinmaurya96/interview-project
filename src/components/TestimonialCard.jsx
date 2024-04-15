@@ -1,118 +1,113 @@
 import React from "react";
 import styled from "styled-components";
-import { FaQuoteLeft,FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const TestimonialCard = () => {
   return (
     <Card>
-      <div className="page">
-        <div className="margin"></div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris
-          risus, lobortis a neque aliquet, ornare rutrum purus. Integer
-          hendrerit ac est non cursus. Integer quis risus tincidunt nunc mattis
-          ultricies. Proin sed enim tellus.
+      <div class="testimonial-container">
+        <p class="testimonial">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
+          repellendus, vitae suscipit culpa molestiae possimus voluptate
+          consequuntur odit nulla saepe obcaecati dolorem laudantium praesentium
+          aspernatur mollitia aperiam laborum rem cum commodi doloremque
+          asperiores officia hic similique. Sint ad nobis quos?
         </p>
-      </div>
-      <div className="user">
-        <div className="image">
-            <img src="https://mscorpres.com/assets/images/user-blank.png" alt="user" />
+        <div class="user">
+          <img
+            src="https://randomuser.me/api/portraits/women/46.jpg"
+            alt="user"
+            class="user-image"
+          />
+          <div class="user-details">
+            <h4 class="username">Lola Smith</h4>
+            <p class="role">Marketing</p>
+          </div>
         </div>
-        <p className="name">jhon doe</p>
-        <p className="bio">iit delhi</p>
       </div>
     </Card>
   );
 };
 const Card = styled.div`
-.user{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    .name{
-        font-size: 20px;
-        text-transform: capitalize;
-        margin-top: 10px;
-        font-weight: 600;
-    }
-    .bio{
-        color: gray;
-        text-transform: uppercase;
-    }
-    .image{
-        width: 100px;
-        height: 100px;
-       border-radius: 50%;
-        overflow: hidden;
-        background-color: red;
-        border: 1px solid lightgray;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background-position: center;
-        }
-    }
+.testimonial-container{
+  background-color: #fff;
+  color: black;
+  /* border-radius: 5px; */
+  padding: 20px;
+  max-width: 768px;
+  position:relative;
+  border: 1px solid lightgray;
+  margin: 50px 0;
+
+  &:hover{
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
 }
-  .page {
-    position: relative;
-    box-sizing: border-box;
-    max-width: 100%;
-    min-height: 200px;
-    max-height: max-content;
-    font-family: cursive;
-    font-size: 20px;
-    border-radius: 10px;
-    background: #fff;
-    background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
-    background-size: 100% 1.2rem;
-    line-height: 1.2rem;
-    padding: 1.4rem 0.5rem 0.3rem 4.5rem;
-  }
 
-  .page::before,
-  .page::after {
-    position: absolute;
-    content: "";
-    bottom: 10px;
-    width: 40%;
-    height: 10px;
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
-    z-index: -1;
-    transition: all 0.3s ease;
-  }
+.fa-quote{
+  color:#FFD369;
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+}
 
-  .page::before {
-    left: 15px;
-    transform: skew(-5deg) rotate(-5deg);
-  }
+.fa-quote-right{
+  left: 40px;
+}
 
-  .page::after {
-    right: 15px;
-    transform: skew(5deg) rotate(5deg);
-  }
+.fa-quote-left{
+  right: 40px;
+}
 
-  .page:hover::before,
-  .page:hover::after {
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
-  }
+.testimonial{
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 30px;
+}
 
-  .margin {
-    position: absolute;
-    border-left: 1px solid #d88;
-    height: 100%;
-    left: 3.3rem;
-    top: 0;
-  }
+.user{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
 
-  .page p {
-    margin: 0;
-    text-indent: 1rem;
-    padding-bottom: 1.2rem;
-    color: black;
-    line-height: 20px;
-    text-align: center;
+.user .user-image{
+  border-radius: 50%;
+  border: 3px solid #FFD369;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.user .user-details{
+  margin-left: 10px;
+}
+
+.user .username{
+  margin: 0;
+}
+
+.user .role{
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.progress-bar{
+  background-color: #FFD369;
+  height: 4px;
+  width: 100%;
+  margin-bottom: 40px;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+@media(max-width: 768px){
+  .testimonial-container{
+    padding: 20px 30px;
   }
+  
+  .fa-quote{
+    display: none;
+  }
+}
 `;
 export default TestimonialCard;

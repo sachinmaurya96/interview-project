@@ -51,20 +51,6 @@ const Header = () => {
             </button>
            
           </div>
-          <div className="social">
-            <a href="#" className="twitter">
-              <FaTwitter size={25} />
-            </a>
-            <a href="#" className="facebook">
-              <FaFacebook size={25} />
-            </a>
-            <a href="#" className="linkedin">
-              <FaLinkedin size={25} />
-            </a>
-            <a href="#" className="youtube">
-              <FaYoutube size={25} />
-            </a>
-          </div>
           <div className="menu_icon">
             <FiMenu size={25} onClick={()=>setToggle(true)}/>
           </div>
@@ -125,7 +111,7 @@ const Menu = styled.nav`
         display: flex;
         align-items: center;
         gap: 5px;
-        border-radius: 8px;
+        /* border-radius: 8px; */
         height: 40px;
         border: none;
         background-color: #488aec;
@@ -137,12 +123,14 @@ const Menu = styled.nav`
           0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,
           0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,
           0 30px 30px -3.75px #0000000d; */
-        font-weight: bold;
         font-family: Montserrat;
         cursor: pointer;
         display: flex;
         align-items: center;
         transition: 150ms ease-in-out;
+        &:hover{
+          background-color: #5c96ec;
+        }
       }
 
       button:active {

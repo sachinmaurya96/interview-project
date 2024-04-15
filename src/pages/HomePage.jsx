@@ -10,28 +10,27 @@ import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <Home>
-      <div className="container">
+      <div className="main">
         <div className="hero_section">
-          <div className="sliders">
-            <FullSLider />
-          </div>
-          <div className="image">
-            <img
-              src="https://mscorpres.com/assets/images/hero-img_3.png"
-              alt="hero"
-            />
+          <div className="container">
+            <div className="sliders">
+              <FullSLider />
+            </div>
+            <div className="image"></div>
           </div>
         </div>
-        <div className="problem_solver">
+       <div className="container">
+       <div className="problem_solver">
           <h1>problem solver</h1>
           <p>SOLVING PROBLEMS FOR EVERY PART OF YOUR BUSINESS OR START UP</p>
           <div className="cards">
             <SimpleCard />
             <SimpleCard />
             <SimpleCard />
-            <SimpleCard />
           </div>
         </div>
+       </div>
+        <div className="container">
         <div className="problem_solver">
           <h1>problem solver</h1>
           <p>SOLVING PROBLEMS FOR EVERY PART OF YOUR BUSINESS OR START UP</p>
@@ -42,13 +41,16 @@ const HomePage = () => {
             <FlipCard />
             <FlipCard />
             <FlipCard />
-            <FlipCard />
-            <FlipCard />
           </div>
         </div>
+        </div>
+        <div className="container">
         <div className="about">
           <div className="image">
-            <img src="https://mscorpres.com/assets/images/about-us-30092021.png" alt="who we are" />
+            <img
+              src="https://mscorpres.com/assets/images/about-us-30092021.png"
+              alt="who we are"
+            />
           </div>
           <div className="content">
             <h3>who we are</h3>
@@ -79,29 +81,40 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="testimonial">
-            <h1>Testimonial</h1>
-            <div className="sliders">
-                <TestimonialSlider/>
-            </div>
         </div>
+       <div className="container">
+       <div className="testimonial">
+          <h1>Testimonial</h1>
+          <div className="sliders">
+            <TestimonialSlider />
+          </div>
+        </div>
+       </div>
         <div className="trustedby"></div>
       </div>
     </Home>
   );
 };
 const Home = styled.section`
- width: 100%;
-  overflow-x: hidden;
-  margin-top: 100px;
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+  width: 100%;
+  overflow-x: hidden; 
+  .container{
+   margin-top: 50px;
   }
   .hero_section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.52),
+        rgba(0, 0, 0, 0.73)
+      ),
+      url("https://i.postimg.cc/zBDKmRyL/annie-spratt-Qckxruozj-Rg-unsplash.jpg");
+    
+    height: 80vh;
+    .container{
+      display: flex;
+     align-items: center;
+     height: 100%;
+    }
     .sliders {
       max-width: 650px;
       min-width: 300px;
@@ -128,7 +141,7 @@ const Home = styled.section`
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
   }
@@ -136,24 +149,22 @@ const Home = styled.section`
     display: flex;
     gap: 50px;
     align-items: center;
-    background-color: #eff4f7;
     .content {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-       
-        h3{
-            font-weight: 600;
-            font-size: 18px;
-            text-transform: capitalize;
-        }
-        h2{
-            font-size: 25px;
-
-        }
-        p{
-            font-size: 15px;
-        }
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 100%;
+      h3 {
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+      h2 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 15px;
+      }
       button {
         margin-top: 10px;
         width: max-content;
@@ -164,12 +175,12 @@ const Home = styled.section`
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s linear;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         border: none;
         padding: 10px 20px;
         font-size: 15px;
         text-transform: capitalize;
-         box-shadow: 0 0.7065919983928324px 0.7065919983928324px -0.625px #00000026,
+        box-shadow: 0 0.7065919983928324px 0.7065919983928324px -0.625px #00000026,
           0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,
           0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,
           0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,
@@ -193,61 +204,60 @@ const Home = styled.section`
       }
     }
   }
-  .testimonial{
-    h1{
-        text-align: center;
+  .testimonial {
+    h1 {
+      text-align: center;
     }
-    .sliders{
-        margin-top: 20px;
-    }
-  }
-  @media only screen and (max-width: 1024px){
-    .problem_solver{
-        .cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .sliders {
+      margin-top: 20px;
     }
   }
-  @media only screen and (max-width: 989px){
-     .hero_section{
-        display: flex;
-        flex-direction: column-reverse;
+  @media only screen and (max-width: 1024px) {
+    .problem_solver {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  @media only screen and (max-width: 989px) {
+    .hero_section {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .about {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      .content {
         align-items: center;
-    }
-    .about{
-        display: flex;
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    .content{
-        align-items: center;
-    }
-
-    }
-}
-@media only screen and (max-width: 600px){
-    .problem_solver{
-        .cards {
-      grid-template-columns: 100%;
-    }
-    }
-    .hero_section{
-        .sliders{
-            width: 500px;
-        }
+      }
     }
   }
-  @media only screen and (max-width: 426px){
-    .problem_solver{
-        .cards {
-      grid-template-columns: 100%;
+  @media only screen and (max-width: 600px) {
+    .problem_solver {
+      .cards {
+        grid-template-columns: 100%;
+      }
     }
+    .hero_section {
+      .sliders {
+        width: 500px;
+      }
     }
-    .hero_section{
-        .sliders{
-            width: 300px;
-        }
+  }
+  @media only screen and (max-width: 426px) {
+    .problem_solver {
+      .cards {
+        grid-template-columns: 100%;
+      }
+    }
+    .hero_section {
+      .sliders {
+        width: 300px;
+      }
     }
   }
 `;

@@ -50,7 +50,6 @@ const Wrapper = styled.div`
   .btn{
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-top: 30px;
     button {
         font-size: 16px;
@@ -58,7 +57,7 @@ const Wrapper = styled.div`
         display: flex;
         align-items: center;
         gap: 5px;
-        border-radius: 8px;
+        /* border-radius: 8px; */
         height: 40px;
         border: none;
         background-color: #488aec;
@@ -76,6 +75,10 @@ const Wrapper = styled.div`
         display: flex;
         align-items: center;
         transition: 150ms ease-in-out;
+
+        &:hover{
+          background-color: #5c96ec;
+        }
       }
 
       button:active {
@@ -96,7 +99,7 @@ const Wrapper = styled.div`
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+   
 
     /* Center slide text vertically */
     display: flex;
